@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Cancelled — JSB Hospitality</title>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/index.html">
+        <span class="brand-mark">JSB Hospitality</span>
+        <span class="brand-sub">Book Direct</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Checkout cancelled</h1>
+      <p class="lede">
+        No charge was made. Your dates weren't reserved — head back to the room
+        page whenever you're ready to try again.
+      </p>
+      <div class="hero-actions">
+        <a href="/studio.html" class="btn btn-primary">Back to Studio</a>
+        <a href="/index.html" class="btn btn-outline">Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p class="fine-print">© <span id="year"></span> JSB Hospitality.</p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

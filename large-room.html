@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Large Room — Basement Apartment — JSB Hospitality</title>
+  <meta name="description" content="A spacious room with an in-wall closet in our basement apartment — book directly, no platform fees." />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/index.html">
+        <span class="brand-mark">JSB Hospitality</span>
+        <span class="brand-sub">Book Direct</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav">
+        <a href="/index.html">Home</a>
+        <a href="/studio.html">Studio</a>
+        <a href="/large-room.html">Large Room</a>
+        <a href="/small-room.html">Small Room</a>
+        <a href="/recommendations.html">Local Guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:0;">
+    <div class="wrap">
+      <span class="badge" style="margin-inline:auto;">Basement apartment · Shared common area</span>
+      <h1>Large Room</h1>
+      <p class="lede">
+        A spacious room with an in-wall closet and a Smart TV, part of our cozy
+        basement apartment. Your room is private; the kitchen, bathroom, and common
+        area are shared.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top:24px;">
+    <div class="wrap">
+      <div class="photos-coming-soon">
+        <strong>Photos coming soon.</strong><br />
+        We're adding pictures of the Large Room shortly — check back, or ask us
+        directly and we'll send some over.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="room-detail">
+        <div>
+          <div class="info-card">
+            <h4>About this space</h4>
+            <p>
+              Welcome to our cozy home! This private room with a secure entrance is
+              part of a shared basement apartment, equipped with a kitchen (no
+              stove) and a clean shared bathroom. The room includes a Full-sized
+              bed, a Smart TV, and an in-the-wall closet. Everything else outside
+              the room — kitchen, bathroom, common area — is shared.
+            </p>
+            <p>
+              We have friendly dogs that guard the property and alert us. Street
+              parking is available nearby. You're just 12 minutes from restaurants,
+              nightlife, and the marina.
+            </p>
+          </div>
+
+          <div class="notice">
+            There is a long-term tenant residing in the final room of this basement
+            apartment; this tenant will not interfere with your stay.
+          </div>
+
+          <div class="info-card" style="margin-top:20px;">
+            <h4>Shared amenities</h4>
+            <ul class="amenity-list">
+              <li>Kitchen (fridge &amp; microwave, no stove)</li>
+              <li>Coffee maker</li>
+              <li>Dining table</li>
+              <li>Bed linens &amp; towels</li>
+              <li>Hot water</li>
+              <li>Radiant heating</li>
+              <li>Wifi</li>
+              <li>Iron &amp; hangers</li>
+              <li>Backyard (shared, fully fenced)</li>
+              <li>Free street parking</li>
+              <li>Smoke &amp; CO alarms</li>
+              <li>Luggage drop-off allowed</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>House rules</h4>
+            <p>
+              Only the person who booked may check in — all guests must be declared
+              on the reservation. No pets, under any circumstances.
+              Check-in 3:00 PM · Check-out 11:00 AM (flexible when we can be).
+              A $50 cleaning fee applies to every stay.
+            </p>
+            <p>
+              Strict no-refund cancellation policy. Guests must follow all city and
+              state laws and the terms of the lease and community policy. Any house
+              rules violated is grounds for immediate removal without refund.
+            </p>
+          </div>
+
+          <div class="notice">
+            Looking for something fully private instead? <a href="/studio.html">See the Private Studio</a> ·
+            <a href="/small-room.html">See the Small Room</a>.
+          </div>
+        </div>
+
+        <div>
+          <div class="booking-card" data-room-id="large-room">
+            <h3>Book the Large Room</h3>
+            <p class="rate" data-rate-label>Pricing coming soon</p>
+
+            <div class="date-row">
+              <div class="field">
+                <label for="lr-checkin">Check-in</label>
+                <input type="date" id="lr-checkin" class="js-checkin" />
+              </div>
+              <div class="field">
+                <label for="lr-checkout">Check-out</label>
+                <input type="date" id="lr-checkout" class="js-checkout" />
+              </div>
+            </div>
+
+            <div class="field" style="margin-bottom:14px;">
+              <label for="lr-guests">Guests</label>
+              <select id="lr-guests" class="js-guests">
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+              </select>
+            </div>
+
+            <div class="field" style="margin-bottom:14px;">
+              <label for="lr-name">Full name</label>
+              <input type="text" id="lr-name" class="js-name" placeholder="Jane Guest" />
+            </div>
+
+            <div class="field" style="margin-bottom:14px;">
+              <label for="lr-email">Email</label>
+              <input type="email" id="lr-email" class="js-email" placeholder="jane@example.com" />
+            </div>
+
+            <div class="summary-line">
+              <span><span class="js-nights-count">0</span> night(s)</span>
+              <span class="js-subtotal">—</span>
+            </div>
+            <div class="summary-line">
+              <span>Cleaning fee</span>
+              <span class="js-cleaning-fee">$50</span>
+            </div>
+            <div class="summary-line total">
+              <span>Total</span>
+              <span class="js-total">—</span>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block js-pay-btn" style="margin-top:16px;">Book &amp; Pay</button>
+            <div class="booking-status js-booking-status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>JSB Hospitality</h4>
+          <p>Private studio &amp; basement apartment rooms in Bay Shore, NY.</p>
+        </div>
+        <div>
+          <h4>Stay</h4>
+          <a href="/studio.html">Private Studio</a>
+          <a href="/large-room.html">Large Room</a>
+          <a href="/small-room.html">Small Room</a>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="/recommendations.html">Local Recommendations</a>
+        </div>
+      </div>
+      <p class="fine-print">© <span id="year"></span> JSB Hospitality. All bookings subject to house rules above.</p>
+    </div>
+  </footer>
+
+  <script src="/config/rooms.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/booking.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    var r = window.JSB_ROOMS["large-room"];
+    var label = document.querySelector('[data-rate-label]');
+    if (label) label.textContent = r.nightlyRate > 0 ? ("$" + r.nightlyRate + " / night") : "Pricing coming soon";
+  </script>
+</body>
+</html>

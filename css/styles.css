@@ -1,0 +1,661 @@
+/* ============================================================
+   JSB Hospitality — shared styles
+   Palette pulled from the studio photos: warm cream walls,
+   tan siding, soft olive + walnut accents.
+   ============================================================ */
+
+:root {
+  --cream: #faf7f0;
+  --cream-deep: #f2ecdd;
+  --ink: #2b2a24;
+  --ink-soft: #55523f;
+  --olive: #5b6b4f;
+  --olive-dark: #3f4b38;
+  --tan: #b08968;
+  --tan-light: #e4d6c3;
+  --line: #e2dac8;
+  --white: #ffffff;
+  --danger: #9c3b3b;
+  --radius: 14px;
+  --shadow: 0 10px 30px -12px rgba(43, 42, 36, 0.25);
+  --max-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Iowan Old Style", "Palatino Linotype", serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--olive-dark);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--olive-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250, 247, 240, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  color: var(--olive-dark);
+}
+
+.brand-sub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+
+nav.main-nav {
+  display: flex;
+  gap: 26px;
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+  color: var(--olive-dark);
+  border-bottom-color: var(--tan);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  nav.main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+  nav.main-nav.open {
+    display: flex;
+  }
+  nav.main-nav a {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  position: relative;
+  padding: 64px 0 56px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 60% at 50% 0%, var(--tan-light) 0%, transparent 70%);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  max-width: 780px;
+  margin: 0 auto 14px;
+}
+
+.hero p.lede {
+  max-width: 620px;
+  margin: 0 auto 26px;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  margin-top: 40px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  max-height: 460px;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 460px;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 13px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--olive-dark);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px -8px rgba(63, 75, 56, 0.6);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--olive-dark);
+  color: var(--olive-dark);
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+}
+
+.btn[disabled],
+.btn.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ---------- room cards (home page) ---------- */
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 8px 0 64px;
+}
+
+@media (max-width: 900px) {
+  .room-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.room-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.room-card .thumb {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--tan-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.room-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-card .body {
+  padding: 20px 22px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card h3 {
+  margin-bottom: 6px;
+}
+
+.room-card .tagline {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.room-card .price {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  color: var(--olive-dark);
+  margin-bottom: 14px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--tan-light);
+  color: var(--olive-dark);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+/* ---------- section helpers ---------- */
+
+section {
+  padding: 56px 0;
+}
+
+section.alt {
+  background: var(--cream-deep);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.section-title p {
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 8px auto 0;
+}
+
+/* ---------- gallery ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery a {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--tan-light);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery a:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.photos-coming-soon {
+  border: 2px dashed var(--tan);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--ink-soft);
+  background: var(--white);
+}
+
+/* ---------- room detail layout ---------- */
+
+.room-detail {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .room-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+.amenity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+
+.amenity-list li {
+  padding-left: 22px;
+  position: relative;
+  color: var(--ink-soft);
+}
+
+.amenity-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--olive);
+  font-weight: 700;
+}
+
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+
+.info-card h4 {
+  margin-bottom: 10px;
+}
+
+.info-card p, .info-card ul {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.notice {
+  background: #fbf1e6;
+  border: 1px solid var(--tan);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.notice.warn {
+  background: #fbeaea;
+  border-color: var(--danger);
+}
+
+/* ---------- booking widget ---------- */
+
+.booking-card {
+  position: sticky;
+  top: 96px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.booking-card h3 {
+  margin-bottom: 4px;
+}
+
+.booking-card .rate {
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.date-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.field input, .field select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--cream);
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.summary-line.total {
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 10px;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.booking-status {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  min-height: 1.2em;
+}
+
+.booking-status.error {
+  color: var(--danger);
+}
+
+.booking-status.ok {
+  color: var(--olive-dark);
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.footer-grid h4 {
+  color: var(--ink);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.footer-grid a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-grid a:hover {
+  color: var(--olive-dark);
+}
+
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fine-print {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---------- recommendations page ---------- */
+
+.rec-list {
+  display: grid;
+  gap: 18px;
+}
+
+.rec-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.rec-item h4 {
+  margin-bottom: 6px;
+}
+
+.rec-item p {
+  color: var(--ink-soft);
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.rec-simple {
+  columns: 3;
+  column-gap: 24px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 700px) {
+  .rec-simple {
+    columns: 1;
+  }
+}
+
+/* ---------- QR block ---------- */
+
+.qr-block {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.qr-block img {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.qr-block p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}

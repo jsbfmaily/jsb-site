@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmed — JSB Hospitality</title>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/index.html">
+        <span class="brand-mark">JSB Hospitality</span>
+        <span class="brand-sub">Book Direct</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge" style="margin-inline:auto;">Payment received</span>
+      <h1>You're booked!</h1>
+      <p class="lede">
+        Thanks — your payment went through and your stay is reserved. A receipt
+        was sent to the email you provided. We'll follow up directly with
+        check-in details before your arrival.
+      </p>
+      <div class="hero-actions">
+        <a href="/index.html" class="btn btn-primary">Back to Home</a>
+        <a href="/recommendations.html" class="btn btn-outline">Local Recommendations</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p class="fine-print">© <span id="year"></span> JSB Hospitality.</p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
